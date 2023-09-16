@@ -14,13 +14,20 @@ import random
 adjs = ["mystical","eccentric","snobbish","nervous",
         "^lost soul of a","agitated","^sworn enemy of a",
         "furious","zen","mysterious","$action figure","moody",
-        "*Lord of the","adventurous","dinosaur"]
+        "*Lord of the","adventurous","dinosaur",
+        "science-based","deep-sea","extra-terrestrial",
+        "$outfit","off-their-freaking-gourd","tiefling",
+        "$who found Jesus","computer-rendered","influencer",
+        "underwhelming"]
 
 nons = ["assassin","goth","pizza delivery person",
         "stand-up comic","antique dealer","lighthouse keeper",
         "meteorologist","IT consultant","vampire",
         "tattoo artist","pirate","conspiracy theorist",
-        "lawyer","ghost","thief"]
+        "lawyer","ghost","thief","cow","wojak",
+        "art teacher","streamer","game dev","puppeteer",
+        "astronaut","Mothman","cosplayer","vampire hunter",
+        "diver","hand model","baby","furry"]
 
 # instantiate variables
 vowels = "aeiouAEIOU"

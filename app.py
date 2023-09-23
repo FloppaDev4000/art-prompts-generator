@@ -1,4 +1,4 @@
-# AUTHOR: Adam Noonan
+# AUTHOR: Adam N
 # PROGRAM: Art Ideas Generator
 
 # import nonsense

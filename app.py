@@ -74,7 +74,7 @@ win.geometry("800x450")
 
 dfont = "calibri bold"
 
-# main frames
+# THE mainframe
 frame1 = tk.Frame(win, width=100, height=220, bg="white")
 frame1.pack(fill=tk.BOTH, expand=True)
 frame2 = tk.Frame(win, width=100, height=100, bg="white")

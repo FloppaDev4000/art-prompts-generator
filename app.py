@@ -63,18 +63,33 @@ def makethestuff(adjective, noun):
         
     if adjective[0] in vowels:
         a = "an"
-    full = (f"DRAW: {a} {adjective} {noun}")
+    full = (f"YOU SHOULD DRAW: {a} {adjective} {noun}")
     return full
 
 # set up window
 win = tk.Tk()
-win.title("app")
-win.geometry("640x480")
+win.title("Art Ideas Generator")
+win.minsize(800,450)
+win.geometry("800x450")
+
+dfont = "calibri bold"
+
+# main frames
+frame1 = tk.Frame(win, width=100, height=220, bg="white")
+frame1.pack(fill=tk.BOTH, expand=True)
+frame2 = tk.Frame(win, width=100, height=100, bg="white")
+frame2.pack(fill=tk.BOTH, expand=True, side=tk.TOP)
+
+bottomLeft = tk.Frame(frame2, bg="white", width=100, height=40)
+bottomLeft.pack(expand=True, fill=tk.BOTH, side=tk.LEFT)
+bottomRight = tk.Frame(frame2, bg="white", width=400, height=40)
+bottomRight.pack(expand=True, fill=tk.BOTH, side=tk.RIGHT)
 
 # text label for prompt to go in
-label = tk.Label(win, text="ART IDEAS GENERATOR.\n Click the buttons to start!",
-font=('Calibri 15 bold'))
-label.pack(pady=20)
+title = tk.Label(frame1,text="ART IDEAS Generator", bg="white", width=600, height=1, font=(dfont, 25))
+title.pack(expand=True, fill=tk.Y)
+label = tk.Label(frame1, text="Click to get started!", bg="white", width=80, height=5, font=(dfont, 18))
+label.pack(expand=True, fill=tk.Y)
 
 # button functions
 def on_click_btnF():
@@ -97,14 +112,14 @@ def on_click_btnN():
     label["text"] = makethestuff(adj, non)
 
 #the actual buttons
-btnA = tk.Button(win, text="NEW ADJECTIVE", command=on_click_btnA)
-btnA.pack(pady=40)
+btnF = tk.Button(bottomRight, text="GENERATE!", width=1, font=(dfont, 18), command=on_click_btnF)
+btnF.pack(expand=True, side=tk.LEFT, fill=tk.BOTH)
 
-btnN = tk.Button(win, text="NEW NOUN", command=on_click_btnN)
-btnN.pack(pady=40)
+btnA = tk.Button(bottomRight, text="NEW ADJECTIVE",  width=20, font=(dfont, 12), command=on_click_btnA)
+btnA.pack(expand=True, side=tk.TOP, fill=tk.BOTH)
 
-btnF = tk.Button(win, text="GENERATE", command=on_click_btnF)
-btnF.pack(pady=40)
+btnN = tk.Button(bottomRight, text="NEW NOUN",  width=20, font=(dfont, 12), command=on_click_btnN)
+btnN.pack(expand=True, side=tk.TOP, fill=tk.BOTH) 
 
 # begin
 win.mainloop()
